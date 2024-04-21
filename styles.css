@@ -1,0 +1,65 @@
+/* 기본 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* 화면 전체를 채우도록 설정 */
+}
+
+/* 진행 바의 스타일 */
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0; /* 초기 너비는 0으로 설정하여 숨김 */
+    height: 5px;
+    background-color: #007bff;
+    display: block; /* 보이도록 설정 */
+}
+
+/* 질문 컨테이너의 스타일 */
+.question-container {
+    text-align: center;
+}
+
+/* 답변 버튼의 스타일 */
+.answer-options {
+    margin-top: 20px;
+    margin-bottom: 20px; /* 답변 사이의 간격 조절 */
+}
+
+.answer-btn {
+    display: block;
+    width: 200px; /* 버튼의 너비 조정 */
+    padding: 10px 20px;
+    margin: 5px auto; /* 수직 가운데 정렬 및 간격 조정 */
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.answer-btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* 미디어 쿼리를 사용하여 반응형으로 스타일 조정 */
+@media (max-width: 768px) {
+    .progress-bar {
+        height: 3px; /* 작은 화면에서는 바의 높이를 줄임 */
+    }
+
+    .question-container {
+        margin-top: 50px; /* 작은 화면에서는 질문 컨테이너의 여백을 늘림 */
+    }
+
+    .answer-btn {
+        width: 150px; /* 작은 화면에서는 버튼의 너비를 줄임 */
+    }
+}
